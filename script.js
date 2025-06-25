@@ -178,4 +178,139 @@ console.log(b);  // 1 3 6
 }
 console.log(b); //6
 
+//scoping
+let car,bike;
+if(true){
+    car=10;
+   
+}
+console.log(car);
+bike=20;
+if(true){
+     console.log(bike);
+}
 
+//still string (there is a conversion for getting original datatypes)
+let jsoncheck={
+    "name" : "sumo",
+    "age" : "30"
+}
+console.log(typeof(jsoncheck.age))     //string output
+console.log(jsoncheck)
+
+//object resume
+let resume = {
+    name: "sumo",
+    age : 30,
+    gender : "female",
+    martialstatus : "married",
+    phonenumber : 9994040526,
+    emailid : "vaishhali7283@gmail.com" ,
+    education : ["sslc","diploma","engineering"],
+    skills : ["html","css","js"],                                //array 
+    address : {                                                 //object 
+        plot : 54,
+        addr : "salai street",
+        pin : 631502
+    }
+}
+console.log(resume.name);
+console.log(resume.age);
+console.log(resume.gender);
+console.log(resume.martialstatus);
+console.log(resume.phonenumber);
+console.log(resume.emailid);
+for(i=0;i<resume.education.length;i++){         //array print
+    console.log(resume.education[i]);
+}
+for(i=0;i<=resume.skills.length-1;i++){
+    console.log(resume.skills[i]);
+}
+console.log(resume.address);                       //object print
+console.log(resume.address.pin);
+console.log(resume.address.addr);
+
+//for of and for in
+let arry = "sumathi";
+for(let prt in arry){
+    console.log(prt);
+}
+
+
+
+let obj = {
+    name: "harsh",
+    age: 25,
+    arr : ["ss","ee"],
+    ob : {
+        qq: "hai",
+        oo: 999,
+        rr : ["sumu","wee"]
+    }
+
+}
+
+
+ /* for(let [ky,val] of Object.entries(obj)){
+    if(typeof val === 'object'){
+
+        console.log(`${ky} : ${JSON.stringify(val)}`)
+    }
+        else{
+    console.log(`${ky} : ${val}`);   
+        }
+    }                  */     
+ 
+ for(let ky in obj){
+        console.log(obj[ky]);   
+
+} 
+//array of object
+
+let ob = [{a:1,b:2},{c:3},{d:4}]
+for(let val of ob){
+    console.log(val)
+}
+
+//for each loop
+let ss = ["a","b","c"]
+ss.forEach(element => {           //element=>user defined name
+    console.log(element)
+});                               //o/p=> a    b   c
+
+//JSON
+//normal json  format
+let jso = {
+    "a" : "bb" ,
+    "b" : "20"
+}
+console.log(jso); 
+ /* output
+Object { a: "bb", b: "20" }
+a: "bb"
+​b: "20" */
+
+//normal object ah json ah matha poran by using stringify method//output=>string
+let jsoo = {
+    a : "bb" ,
+    b : 20
+}
+
+//stringify
+let bbb = JSON.stringify(jsoo);           //string o/p
+console.log(bbb)
+/* output is string (single line)
+{"a":"bb","b":20} */
+
+//parse
+let ccc=JSON.parse(bbb);       //proper ah align pani tharum like json object
+console.log(ccc)           //object <o/p>
+/* Object { a: "bb", b: 20 }
+a: "bb"
+b: 20 */
+
+//typeof
+console.log(typeof(jso));       //object
+console.log(typeof(jsoo));       //object
+console.log(typeof(bbb));         //string       (api la irunthu vara data will be string)
+ console.log(typeof(ccc));          //object
