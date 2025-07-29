@@ -1,0 +1,460 @@
+/* root colors   */
+
+:root{
+    --orange-color: #DA722C ;
+    --dark-blue-color:   #023047 ;
+    --dark-color:   #070917 ;
+    --light-color:   #E8F7FB  ;
+    --light-blue-color:  #6F7DFB  ;
+    --blue-color:  #057ADA  ;
+}
+
+/* base stylings */
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "poppins",sans-serif;
+    
+}
+.wrapper{
+    max-width: 1134px;   /*  large screen xl */
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+
+/* btn stylings */
+.btn{
+    
+    color: var(--light-color);
+    text-decoration: none;
+    border-radius: 24px;
+    padding: 16px 32px;
+    font-weight: bold;
+    position: relative;           /* future use for icon fixed inside button */
+display: inline-block;              /* button placed correctly */      
+font-size: 16px;
+
+ 
+}
+.btn.dark{
+    background: var(--dark-blue-color);
+}
+.btn.light{
+    background: var(--orange-color);
+}
+.btn.enrol-icon::before{
+    content: url(assets/PencilAlt.svg);
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    transform: translateY(-50%);
+}
+
+  .btn.enrol-icon {
+    padding-left: 60px;
+  }
+  /* testimonial section */
+  .testimonial-section .left::before{
+    content: "";
+    width: 20px;
+    height: 420px;
+    background-color: #DA722C;
+    position: absolute;
+    left: 20%;
+    z-index: -100;
+    border-radius: 20px ;
+  }
+  .testimonial-section{
+    display: flex;
+    
+    margin-top: 100px;
+    
+  }
+  .left{
+    width: 50%;
+  }
+  .right{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    width: 50%;
+  }
+ 
+    .desktop-btn{
+    
+    display: flex;
+   align-self: flex-start; 
+    
+
+  }
+  .testimonial-card{
+    width: 400px;
+    height: 150px;
+    background-color: black;
+    margin: 30px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    
+    
+    
+  }
+  
+  .info{
+    
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+  }
+  .content{
+    background-color: #DA722C;
+    padding: 12px;
+    border-radius: 20px;
+    margin-top: -20px;
+  }
+ .set{
+  padding: 12px;
+  line-height: 2px;
+ }
+ .sety{
+     position: absolute;
+     top: -40%;
+     left: 60%;
+ }
+ .testimonial-card.movy{
+    margin-left: 60px;
+    margin-top: 60px;
+ }
+ @media (min-width: 300px) and (max-width: 543px) {
+     .testimonial-section{
+    display: flex;
+    flex-direction: column;
+   
+  }
+  .left{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  
+  .testimonial-section .left::before{
+    content: "";
+    width: 20px;
+    height: 480px;
+    background-color: #DA722C;
+    position: absolute;
+    left: 40%;
+    z-index: -100;
+    border-radius: 20px ;
+  }
+   .testimonial-card{
+    width: 250px;
+    height: 150px;
+    background-color: black;
+    margin: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    
+    
+    
+  }
+  
+  .info{
+    
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+  }
+  .content{
+    background-color: #DA722C;
+    padding: 6px;
+    border-radius: 20px;
+    margin-top: -20px;
+  }
+ .set{
+  padding: 6px;
+  line-height: 2px;
+ }
+ .sety{
+     position: absolute;
+     top: -10%;
+     left: 60%;
+     
+ }
+ img{
+    width: 90px;
+    height: 90px;
+ }
+ 
+ 
+  .right{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px;
+    flex-wrap: wrap;
+   
+  }
+   .desktop-btn{
+    
+    display: flex;
+   align-self: center;         /* important */
+    
+
+  }
+
+ }
+
+ /* courses section  */
+   .courses-section{
+    background-color: var(--light-blue-color);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    
+   }
+  
+  .courses-section .wrapper h2.light{
+    text-align: center;
+    padding: 50px;
+  }
+ .course-cards{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    
+
+ }
+ .course-card{
+    background-color: #fff;
+    border-radius: 6%;
+    width: 500px;
+    height: 300px;       
+    margin: 20px;
+    position: relative;
+    
+    
+ }
+ .course-card img {
+    width: 80%;
+    height: 70%;
+  margin: -5px 10% ;
+ 
+
+ }
+ .course-card h3{
+    width: 60%;
+    margin: 0px 10% ;
+
+ }
+.course-card .info{
+display: flex;
+position: relative;
+margin: 10px;
+}
+.course-card .info .duration{
+position: absolute;
+right: 20px;
+top: 20px;
+}
+.course-card .info .duration span i{
+
+margin-right: 5px;
+}
+.course-card::after{
+    content: "";
+    width: 80%;
+    height: 6px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+
+}
+.courses-section .wrapper .endy{
+    
+      text-align: end;
+      margin: 20px; 
+      /* position: absolute;
+      right: 20%; */
+    
+}
+
+@media (min-width: 300px) and (max-width: 910px) {
+    .courses-section{
+        width: 100%;
+        min-height: 130vh ;
+    
+    }
+
+ .course-cards{
+    display: flex;
+   flex-wrap: wrap;
+   
+
+    
+
+ }
+ .course-card{
+    width: 400px;
+    height: 250px;
+ }
+  .courses-section .wrapper h2.light{
+    font-size: 20px;
+  }
+
+.courses-section .wrapper .endy{
+    text-align: center;
+}
+.course-card .info h3{
+    font-size: 15px;
+}
+
+}
+/* app section */
+
+.app-section h2{
+    margin-top: 40px;
+}
+
+.app-section h2,p{
+text-align: center;
+
+ }
+ .app-buttons{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+ }
+.app-btn{
+    background-color: #070917;
+color:white;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px 60px 10px 15px;
+gap: 10px;
+}
+.app-btn img{
+width: 50px;
+height: 50px;
+}
+
+ @media (min-width: 300px) and (max-width: 1200px) {
+.app-buttons{
+
+    flex-wrap: wrap;
+}
+.app-btn.trick{
+    padding: 10px 40px 10px 15px ;
+    
+}
+
+
+ }
+
+ /* footer */
+
+ .links-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    
+    padding-top: 50px;
+    padding-bottom: 50px; 
+    background-color: #070917;
+    color: aqua;
+    
+   
+ }
+ .links-container .links{
+    
+    width: 300px;
+    height: 200px;
+    
+ }
+ .links-container .links h3{
+color: yellow;
+ }
+
+ .links-container .links ul li{
+ list-style-type: none;
+ padding: 5px;
+ }
+
+.links-container .links ul li a{
+
+
+    color: #E8F7FB;
+   
+
+}
+.links .social a img{
+    width: 20px;
+    height: 20px;
+    
+    
+}
+.links-container .links ul li.formy{
+    background-color: #DA722C;
+    
+}
+.links-container .links ul li.formy input[type="text"]{
+
+    background-color: #DA722C ;
+    border: none;
+    color: aliceblue;
+
+}
+
+input[type="text"]:focus {
+   background-color: #DA722C ;
+    border: none;
+    color: aliceblue;
+
+  
+}
+input::placeholder {
+  color: #fff; 
+}
+
+ @media (min-width: 300px) and (max-width: 1200px) {
+
+.links-container{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+
+
+    
+}
+
+
+
+ }
+
+ 

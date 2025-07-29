@@ -1,0 +1,108 @@
+/* box model
+ */
+ .box{
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 50px;
+    background-color: brown;
+position: relative;
+}
+.circle{
+    width: 250px;
+    height: 250px;
+    border: 10px solid black;
+    border-radius: 50%;
+    margin: 20px auto;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNPQac0bU0hwyrNkv0_k88swEJgAEG1jaKnw&s);
+    
+}
+.cir{
+    width: 250px;
+    height: 250px;
+    border: 10px solid black;
+    border-radius: 50%;
+    margin: 20px auto;
+    
+}
+ img{
+    width: 250px;
+    height: 250px;
+     /* border: 10px solid black; */
+    border-radius: 50%;
+    /* margin: 20px auto; */
+    
+    object-fit: cover; /* to fit perfect */
+}
+.box1{
+     width: 100px;
+    height: 20px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+        border-radius: 5px;
+       
+        
+
+}
+.box2{
+     width: 100px;
+    height: 20px;
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+        border-radius: 5px;
+
+    margin-left: 200px; 
+}
+
+@media (max-width: 560px){
+     .box{
+    width: 300px;
+    height: 300px;
+     }
+}
+body{
+    background-color: black;
+    color: red;
+    
+}
+html{
+    font-size: 50px;
+}
+div{
+    font-size: 10px;
+} 
+.pp{
+    font-size: 2em; /* refer root 20px*/
+}
+.ph{
+    font-size: 1rem; /*  refer parent 50px */
+}
+@media (max-width: 768px){
+    body{
+       
+        color: aqua;
+    }
+    h1{
+ text-align: center;
+    }
+    p{
+text-align: justify;
+    }
+}
+@media (min-width: 1025px){
+    body{
+        background-color: aliceblue;
+        color: black;
+    }
+}
+@media (orientation: portrait){
+    body{
+        background-color: red;
+        color: white;
+    }
+
+}
